@@ -20,7 +20,7 @@ void I(int l){
          else
          printf(" ");
       }
-      for(int t=1;t<90;t++){printf(" ");}
+      for(int t=1;t<65;t++){printf(" ");}
       printf("\n");
    }
 }
@@ -74,26 +74,20 @@ void U(int l){
 void I_L_U(){
     for(;;){
         printf("\033[H\033[2J");
-        int a = 3, n = 0, l=1;
         for (int i=1;i<=3;i++) {
             if(i==1){
-                I(l);
-                l = l+12;
+                I(30);
             }else if(i==2){
-                Love(l);
-                l = l+39;
+                Love(30+12);
             }else if(i==3){
-                U(l);
-                l = l+24;
+                U(30+12+39);
             }
             printf("\033[H");
-            if(i==3 && n<=a){
+            if(i==3){
                 i=0;
-                n++;
-                l=n*25;\
                 slowDown(.001);
                 printf("\033[H");
-            }
+                }
         } 
     }
 }
