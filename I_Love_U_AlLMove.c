@@ -207,10 +207,10 @@ void connectLove(int c1, int c2){
 int main() {
   // Red: 31, Green: 32, Yellow: 33, Blue: 34, Magenta: 35, Cyan: 36
   for(;;){
-    for(int i=0; i<6; i++){
-      if(i<2){
+    for(int i=0; i<3; i++){
+      if(i==0){
         I_L_U(34, 31);
-      }else if(i>4){
+      }else if(i==1){
         proLove(32, 33);
       }else{
         connectLove(35, 36);
@@ -218,3 +218,4 @@ int main() {
     }
   }
 }
+
