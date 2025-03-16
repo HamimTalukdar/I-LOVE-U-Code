@@ -52,7 +52,7 @@ void Love(int left_space, int right_space, float time, int color, bool raw, int 
             if(i<3 && ((j>=(n-7)-k && j<=(n-1)+k) || (j>=(2*n+1)-k && j<=(2*n+7)+k))){
               printf("\033[1;%dm*\033[0m", color);
             }
-            else if(i>2 && (j>=k-7 && j<=37-k) || (i==12 && j==15 )){
+            else if((i==3 && j!=15) || (i>3 && (j>=k-7 && j<=37-k)) || (i==12 && j==15 )){
               printf("\033[1;%dm*\033[0m", color);
             }
             else 
